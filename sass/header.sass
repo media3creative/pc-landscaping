@@ -10,53 +10,49 @@
 
 #header
 	@extend .box
-	@extend .bg-gradient-primary
 	width: 100%
 	height: $header-height
 	margin: 0
 	padding: 0
-	border-bottom: 2px solid $header-border
-.center
-	@extend .center-container
-	@extend .bg-gradient-primary
-	@extend .box
-	#logo1
+	background: url(/images/bg-banner.png) center repeat-x
+	.center
+		@extend .center-container
 		@extend .box
-		position: absolute
-		top: (($header-height - $logoH)/2)
-		left: (5px	+ $v-gap)
-		margin: 0
-		a
-			display: block
+		#logo1
+			@extend .box
+			position: absolute
+			top: -2px
+			left: (5px	+ $v-gap)
 			margin: 0
-			padding: 0
-			&:hover
-				@extend .opaque
-			img
-				width: $logoW
-				height: $logoH
+			a
+				display: block
 				margin: 0
 				padding: 0
-				border: 0
-				background: transparent
+				width: $logoW
+				height: $logoH
+				background: url(/images/logo.png) no-repeat
+				&:hover
+					background: url(/images/logo-2.png) no-repeat
+				img
+					margin: 0
+					padding: 0
+					border: 0
 		
 			
 // NAVMENU
 ul#topnav
 	font-family: "EmbedFont-1"
-	+float-right
-	margin: 20px ($v-gap) 0 ($logoW + 5px + $h-gap)
+	+float-left
+	margin: 42px ($v-gap) 0 ($logoW + 15px + $h-gap)
 	padding: 0
 	color: $nav-text
-	font-size: 11px
-	letter-spacing: 0.05em
 	list-style: none
 	z-index: 50
 
 ul#topnav li 
 	position: relative
 	+float-left
-	margin: 0
+	margin: 0 1.5em
 	padding: 0
 
 ul#topnav li a 
@@ -65,17 +61,14 @@ ul#topnav li a
 
 ul#topnav a.topnav
 	@extend .box
-	margin: 6px -1px 0 0
-	padding: .5em 2em .4em 2em
-	font-size: 13px
+	margin: 0
+	padding: 2px
+	font-size: 28px
 	text-align: center
 	text-transform: uppercase
-	border-left: 1px solid $nav-lines
-	border-right: 1px solid $nav-lines
 
 ul#topnav li:hover a.topnav, ul#topnav li a.topnav:hover 
 	color: $nav-text-hover
-	//background: url("../images/nav/nav_bg.png") repeat
  
 ul#topnav li .sub 
 	@extend .corner-bottom
@@ -139,5 +132,4 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
 	@extend .navigation-hover
 
 .navigation-hover
-	//@extend .bg-gradient-secondary
 	color: $nav-text-hover
