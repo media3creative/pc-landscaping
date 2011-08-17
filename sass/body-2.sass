@@ -72,14 +72,14 @@
 	h1
 		@extend .box
 		@extend .corner-top
-		font-family: "EmbedFont-1"
+		font-family: "EmbedFont-2"
 		position: relative
 		color: $option-title
 		background: $option-title-bg
 		width: ($option-width - ($h-gap *2))
 		margin: 0 auto
 		padding: 1em 0
-		font-size: 18px
+		font-size: 16px
 		font-weight: 100
 		text-transform: uppercase
 		text-align: left
@@ -100,14 +100,14 @@
 
 .link
 	@extend .clearfix
-	@extend .font-trebuchet
+	@extend .font-base
 	@extend .box
 	position: relative
 	width: ($option-width - ($h-gap *2))
 	margin: 0 auto
 	padding: 0.5em 0
 	font-size: 11px
-	border-bottom: 1px dotted $line-color
+	border-bottom: 1px dotted $secondary-light
 	&:last-child
 		border-bottom: none
 		margin-bottom: ($v-gap / 2)
@@ -120,7 +120,7 @@
 		top: 5px
 		width: 7px
 		height: 7px
-		background: $secondary
+		background: $primary
 		font-size: 11px
 		text-align: center
 	p
@@ -136,7 +136,7 @@
 			font-size: 12px
 			color: $option-link
 			&:hover
-				color: $secondary
+				color: $option-link-hover
 				text-decoration: none
 					
 // Text-style sidebar box
@@ -154,6 +154,11 @@
 		line-height: 1.7em
 		&:last-child
 			margin-bottom: ($v-gap / 2)
+		a
+			color: #fff
+			&:hover
+				color: $primary
+				text-decoration: none
 
 // Button-style sidebar box
 .button
@@ -200,10 +205,15 @@
 		width: $content-width !important
 		.section
 			@extend .box
+			@extend .corner-all
 			@extend .clearfix
 			position: relative
-			padding: 0 0 ($v-gap) 0
-			border-bottom: 1px dotted $section-border
+			padding: 0 0 $corner-radius
+			background: url(/images/nav_BG.png) repeat
+			border-top: 1px solid #777
+			border-left: 1px solid #777
+			border-bottom: 1px solid #000
+			border: 1px solid #000
 			&:last-child
 				padding-bottom: 0
 				border-bottom: none
@@ -218,31 +228,28 @@
 				margin: 0 ($h-gap / 2) ($v-gap / 2) 0
 				z-index: 100
 			h1
-				font-family: "EmbedFont-1"
+				font-family: "EmbedFont-2"
 				@extend .box
 				width: ($content-width - ($content-img-w + ($h-gap / 2)))
 				margin: $corner-radius 0 ($v-gap/3) ($content-img-w + ($h-gap / 2))
-				padding: 0 3em 0.5em $corner-radius
+				padding: 1em $h-gap 0.5em
 				color: $section-title !important
 				font-size: 18px
 				font-weight: 100
 				text-transform: uppercase
 				word-spacing: .1em
 				letter-spacing: .05em
-				border-bottom: 1px solid $section-lines
 			p
-				@extend .font-trebuchet
+				@extend .font-base
 				@extend .box
 				width: ($content-width)
 				margin: $corner-radius 0 ($v-gap/3) 0
-				padding: 0 0 0 $corner-radius
+				padding: 0 $h-gap 0
 				color: $section-text
 				font-size: 12px
 				font-weight: 200
 				text-align: justify
 				line-height: 1.7em
-				&:last-child
-					margin-bottom: 0
 				a
 					color: $primary-light
 					text-decoration: none
@@ -258,8 +265,11 @@
 	clear: both
 	width: $sidebar-width
 	margin: 0 0 $v-gap 0
-	background: $option-bg
-	border: 1px solid $option-border
+	background: url(/images/nav_BG.png) repeat
+	border-top: 1px solid #777
+	border-left: 1px solid #777
+	border-bottom: 1px solid #000
+	border: 1px solid #000
 	z-index: 20
 
 .columns

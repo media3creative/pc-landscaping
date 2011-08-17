@@ -1,26 +1,32 @@
-- @sitename = "Site Name"
+- @sitename = "Pacific Coast Landscape and Design"
 
 // MAIN NAVIGATION
-- @link1 = ["Home", "/home"]
-- @link2 = ["About", "/page2"]
-- @link3 = ["Services", "/page3"]
-- @link4 = ["Gallery", "/gallery"]
-- @link5 = ["Contact", "/page5"]
+- @link0 = ["Home", "/home"]
+- @link1 = ["About", "/about"]
+- @link2 = ["Maintenance", "/maint"]
+- @link3 = ["Installation", "/install"]
+- @link4 = ["Galleries", "/gallery"]
+- @link5 = ["Contact", "/contact"]
 
 // FOOTER LINKS
-- @linkA1 = ["link name", "/path"]
-- @linkA2 = ["link name", "/path"]
-- @linkA3 = ["link name", "/path"]
-- @linkA4 = ["link name", "/path"]
-- @linkA5 = ["link name", "/path"]
+- @linkA1 = ["Ewing Irrgation", "http://www.ewing1.com/"]
+- @linkA2 = ["Hrydro Scope Products", "http://www.hydroscape.com/"]
+- @linkA3 = ["John Deere", "http://www.deere.com/wps/dcom/en_US/regional_home.page"]
+- @linkA4 = ["Hunter Products", "http://www.hunterproducts.com/"]
+- @linkA5 = ["Rain Bird", "http://store.rainbird.com/"]
+- @linkA6 = ["Toro", "http://www.toro.com/en-us/pages/default.aspx"]
+- @linkA7 = ["Irrigator Tech", "http://www.irrigatortech.com/home.html"]
+- @linkA8 = ["Saw House", "http://www.sawhouse.com/"]
+- @linkA9 = ["California Landscape Contractors Association", "http://www.clca.org/"]
+- @linkA10 = ["Better Business Bureau", "http://www.bbb.org/us/"]
 
-- @linkB1 = ["link name", "/path"]
-- @linkB2 = ["link name", "/path"]
-- @linkB3 = ["link name", "/path"]
-- @linkB4 = ["link name", "/path"]
+- @linkB1 = ["Office: (951) 683-2197", "/path"]
+- @linkB2 = ["email@pclandscpaedesign.com", "mailto:email@pclandscpaedesign.com"]
+- @linkB3 = ["Contact Us", "/contact"]
+- @linkB4 = ["Testimonials", "/testimonials"]
 - @linkB5 = ["link name", "/path"]
 
-- @linkC1 = ["link name", "/path"]
+- @linkC1 = ["Facebook", "www.facebook.com/name"]
 - @linkC2 = ["link name", "/path"]
 - @linkC3 = ["link name", "/path"]
 - @linkC4 = ["link name", "/path"]
@@ -104,68 +110,68 @@
     
     
     // DROPDOWN MENU  
-    / :javascript
-    /   $(document).ready(function() {
-    / 
-    / 
-    /     function megaHoverOver(){
-    /       $(this).find(".sub").stop().fadeTo('fast', 1).show();
-    / 
-    /       //Calculate width of all ul's
-    /       (function($) { 
-    /         jQuery.fn.calcSubWidth = function() {
-    /           rowWidth = 0;
-    /           //Calculate row
-    /           $(this).find("ul").each(function() {          
-    /             rowWidth += $(this).width(); 
-    /           }); 
-    /         };
-    /       })(jQuery); 
-    / 
-    /       if ( $(this).find(".row").length > 0 ) { //If row exists...
-    /         var biggestRow = 0; 
-    /         //Calculate each row
-    /         $(this).find(".row").each(function() {                 
-    /           $(this).calcSubWidth();
-    /           //Find biggest row
-    /           if(rowWidth > biggestRow) {
-    /             biggestRow = rowWidth;
-    /           }
-    /         });
-    /         //Set width
-    /         $(this).find(".sub").css({'width' :biggestRow});
-    /         $(this).find(".row:last").css({'margin':'0'});
-    / 
-    /       } else { //If row does not exist...
-    / 
-    /         $(this).calcSubWidth();
-    /         //Set Width
-    /         $(this).find(".sub").css({'width' : rowWidth});
-    / 
-    /       }
-    /     }
-    / 
-    /     function megaHoverOut(){ 
-    /       $(this).find(".sub").stop().fadeTo('fast', 0, function() {
-    /         $(this).hide(); 
-    /       });
-    /     }
-    / 
-    / 
-    /     var config = {    
-    /        sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)    
-    /        interval: 100, // number = milliseconds for onMouseOver polling interval    
-    /        over: megaHoverOver, // function = onMouseOver callback (REQUIRED)    
-    /        timeout: 00, // number = milliseconds delay before onMouseOut    
-    /        out: megaHoverOut // function = onMouseOut callback (REQUIRED)    
-    /     };
-    / 
-    /     $("ul#topnav li .sub").css({'opacity':'0'});
-    /     $("ul#topnav li").hoverIntent(config);
-    / 
-    / 
-    / 
-    /   });
+    :javascript
+      $(document).ready(function() {
+    
+    
+        function megaHoverOver(){
+          $(this).find(".sub").stop().fadeTo('fast', 1).show();
+    
+          //Calculate width of all ul's
+          (function($) { 
+            jQuery.fn.calcSubWidth = function() {
+              rowWidth = 0;
+              //Calculate row
+              $(this).find("ul").each(function() {          
+                rowWidth += $(this).width(); 
+              }); 
+            };
+          })(jQuery); 
+    
+          if ( $(this).find(".row").length > 0 ) { //If row exists...
+            var biggestRow = 0; 
+            //Calculate each row
+            $(this).find(".row").each(function() {                 
+              $(this).calcSubWidth();
+              //Find biggest row
+              if(rowWidth > biggestRow) {
+                biggestRow = rowWidth;
+              }
+            });
+            //Set width
+            $(this).find(".sub").css({'width' :biggestRow});
+            $(this).find(".row:last").css({'margin':'0'});
+    
+          } else { //If row does not exist...
+    
+            $(this).calcSubWidth();
+            //Set Width
+            $(this).find(".sub").css({'width' : rowWidth});
+    
+          }
+        }
+    
+        function megaHoverOut(){ 
+          $(this).find(".sub").stop().fadeTo('fast', 0, function() {
+            $(this).hide(); 
+          });
+        }
+    
+    
+        var config = {    
+           sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)    
+           interval: 100, // number = milliseconds for onMouseOver polling interval    
+           over: megaHoverOver, // function = onMouseOver callback (REQUIRED)    
+           timeout: 00, // number = milliseconds delay before onMouseOut    
+           out: megaHoverOut // function = onMouseOut callback (REQUIRED)    
+        };
+    
+        $("ul#topnav li .sub").css({'opacity':'0'});
+        $("ul#topnav li").hoverIntent(config);
+    
+    
+    
+      });
 
 
   
@@ -175,31 +181,46 @@
     #header
       .center
         #logo1
-          %a{:href => @link1[1]}
-            //%img{:src => "/images/logo.png", :alt => ""+@sitename+" Logo"}
+          %a{:href => @link0[1]}
         %ul#topnav
           %li
             %a#one.topnav{:href => @link1[1]}
               =@link1[0]
+            .sub
+              %ul
+                %li
+                  %a{:href => @link1[1]+"#about"} About Us
+                %li
+                  %a{:href => @link1[1]+"#news"} News
           %li
             %a#two.topnav{:href => @link2[1]}
               =@link2[0]
             .sub
               %ul
-                / / %li
-                / /   %h2 Header
-                / %li
-                /   %a{:href => "#"} Navigation Link
-                / %li
-                /   %a{:href => "#"} Navigation Link
-                / %li
-                /   %a{:href => "#"} Navigation Link
+                %li
+                  %a{:href => "/az"} Arizona
+                %li
+                  %a{:href => "/ca"} California
+                %li
+                  %a{:href => "/hi"} Hawaii
+                %li
+                  %a{:href => "/tx"} Texas
           %li
             %a#three.topnav{:href => @link3[1]}
               =@link3[0]
           %li
             %a#four.topnav{:href => @link4[1]}
               =@link4[0]
+            .sub
+              %ul
+                %li
+                  %a{:href => @link4[1]+"#az"} Arizona
+                %li
+                  %a{:href => @link4[1]+"#ca"} California
+                %li
+                  %a{:href => @link4[1]+"#hi"} Hawaii
+                %li
+                  %a{:href => @link4[1]+"#tx"} Texas
           %li
             %a#five.topnav{:href => @link5[1]}
               =@link5[0]
@@ -210,37 +231,43 @@
     #footer
       .center
         .content
-          &nbsp;
-          .column
-            %h4 Group One
-            %a{:href => @linkA1[1]}
-              =@linkA1[0]
-            %a{:href => @linkA2[1]}
-              =@linkA2[0]
-            %a{:href => @linkA3[1]}
-              =@linkA3[0]
-            %a{:href => @linkA4[1]}
-              =@linkA4[0]
-          .column
-            %h4 Group Two
-            %a{:href => @linkB1[1]}
+          .row
+            %a.partner{:href => @linkA1[1]}
+              %img{:src => "/images/p1.png", :alt => @linkA1[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA2[1]}
+              %img{:src => "/images/p2.png", :alt => @linkA2[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA3[1]}
+              %img{:src => "/images/p3.png", :alt => @linkA3[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA4[1]}
+              %img{:src => "/images/p4.png", :alt => @linkA4[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA5[1]}
+              %img{:src => "/images/p5.png", :alt => @linkA5[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA6[1]}
+              %img{:src => "/images/p6.png", :alt => @linkA6[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA7[1]}
+              %img{:src => "/images/p7.png", :alt => @linkA7[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA8[1]}
+              %img{:src => "/images/p8.png", :alt => @linkA8[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA9[1]}
+              %img{:src => "/images/p9.png", :alt => @linkA9[0]+" Logo", :target => "_blank"}
+            %a.partner{:href => @linkA10[1]}
+              %img{:src => "/images/p10.png", :alt => @linkA10[0]+" Logo", :target => "_blank"}
+          .row
+            %p
               =@linkB1[0]
-            %a{:href => @linkB2[1]}
-              =@linkB2[0]
-            %a{:href => @linkB3[1]}
-              =@linkB3[0]
-            %a{:href => @linkB4[1]}
-              =@linkB4[0]
-          .column
-            %h4 Group Three
-            %a{:href => @linkC1[1]}
-              =@linkC1[0]
-            %a{:href => @linkC2[1]}
-              =@linkC2[0]
-            %a{:href => @linkC3[1]}
-              =@linkC3[0]
-            %a{:href => @linkC4[1]}
-              =@linkC4[0]  
+              = "&nbsp;&nbsp; | "
+              %a{:href => @linkB2[1]}
+                =@linkB2[0]
+              = " | "
+              %a{:href => @linkB3[1]}
+                =@linkB3[0]
+              = " | "
+              %a{:href => @linkB4[1]}
+                =@linkB4[0]
+              = " | "
+              %a{:href => @linkC1[1]}
+                %img.icon{:src => "/images/facebook-white.png"}
+                =@linkC1[0]
               
                   
     .m3c-bar

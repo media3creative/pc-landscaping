@@ -1,4 +1,4 @@
-.font-helvetica {
+.font-helvetica, .font-base, #footer .center, #footer .center .content .row a, #footer .center .content .row p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -14,15 +14,15 @@
   font-family: Georgia, times, "Times New Roman", sans-serif;
 }
 
-.font-trebuchet, .font-base, #footer .center .content .column a {
+.font-trebuchet {
   font-family: "Trebuchet MS", "Trebuchet", "Times New Roman";
 }
 
 .bg-gradient-primary {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#006bc7), to(#003461));
+  background: -webkit-gradient(linear, left top, left bottom, from(#8dce8f), to(#49ac4d));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #006bc7, #003461);
+  background: -moz-linear-gradient(top, #8dce8f, #49ac4d);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary-light, endColorstr=$primary);
   /* For Internet Explorer 8 */
@@ -31,9 +31,9 @@
 
 .bg-gradient-reverse {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#003461), to(#006bc7));
+  background: -webkit-gradient(linear, left top, left bottom, from(#49ac4d), to(#8dce8f));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #003461, #006bc7);
+  background: -moz-linear-gradient(top, #49ac4d, #8dce8f);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primary-light);
   /* For Internet Explorer 8 */
@@ -42,21 +42,23 @@
 
 .bg-gradient-secondary {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#ebd716), to(#d8a41c));
+  background: -webkit-gradient(linear, left top, left bottom, from(#633e2c), to(#40281c));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #ebd716, #d8a41c);
+  background: -moz-linear-gradient(top, #633e2c, #40281c);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$secondary-light, endColorstr=$secondary);
   /* For Internet Explorer 8 */
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$secondary-light, endColorstr=$secondary);
 }
 
-h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, b::selection, a::selection {
-  background: #b4d5ff;
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, b::selection, a::selection, img::selection, sup::selection, sub::selection {
+  color: #40281c;
+  background: #b8f0ba;
 }
 
-h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, b::-moz-selection, a::-moz-selection {
-  background: #b4d5ff;
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, b::-moz-selection, a::-moz-selection, img::-moz-selection, sup::-moz-selection, sub::-moz-selection {
+  color: #40281c;
+  background: #b8f0ba;
 }
 
 .corner-top-left {
@@ -170,25 +172,25 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   background: transparent;
 }
 
-.box, .center-container, #footer .center, #footer .center .content .column {
+.box, .center-container, #footer .center, #footer .center .content .row, #footer .center .content .row p {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.opaque {
+.opaque, #footer .center .content .row a.partner:hover {
   opacity: 0.75;
   filter: alpha(opacity=75);
 }
 
 .contact-form {
   overflow: hidden;
-  margin-bottom: -23px;
+  margin-bottom: -13px !important;
 }
 .contact-form iframe {
   position: relative;
-  top: -38px;
+  top: -38px !important;
 }
 
 p {
@@ -197,11 +199,10 @@ p {
 }
 
 b {
-  color: black !important;
   font-weight: bold;
 }
 
-.font-helvetica {
+.font-helvetica, .font-base, #footer .center, #footer .center .content .row a, #footer .center .content .row p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -217,15 +218,15 @@ b {
   font-family: Georgia, times, "Times New Roman", sans-serif;
 }
 
-.font-trebuchet, .font-base, #footer .center .content .column a {
+.font-trebuchet {
   font-family: "Trebuchet MS", "Trebuchet", "Times New Roman";
 }
 
 .bg-gradient-primary {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#006bc7), to(#003461));
+  background: -webkit-gradient(linear, left top, left bottom, from(#8dce8f), to(#49ac4d));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #006bc7, #003461);
+  background: -moz-linear-gradient(top, #8dce8f, #49ac4d);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary-light, endColorstr=$primary);
   /* For Internet Explorer 8 */
@@ -234,9 +235,9 @@ b {
 
 .bg-gradient-reverse {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#003461), to(#006bc7));
+  background: -webkit-gradient(linear, left top, left bottom, from(#49ac4d), to(#8dce8f));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #003461, #006bc7);
+  background: -moz-linear-gradient(top, #49ac4d, #8dce8f);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primary-light);
   /* For Internet Explorer 8 */
@@ -245,21 +246,23 @@ b {
 
 .bg-gradient-secondary {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#ebd716), to(#d8a41c));
+  background: -webkit-gradient(linear, left top, left bottom, from(#633e2c), to(#40281c));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #ebd716, #d8a41c);
+  background: -moz-linear-gradient(top, #633e2c, #40281c);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$secondary-light, endColorstr=$secondary);
   /* For Internet Explorer 8 */
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$secondary-light, endColorstr=$secondary);
 }
 
-h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, b::selection, a::selection {
-  background: #b4d5ff;
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, b::selection, a::selection, img::selection, sup::selection, sub::selection {
+  color: #40281c;
+  background: #b8f0ba;
 }
 
-h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, b::-moz-selection, a::-moz-selection {
-  background: #b4d5ff;
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, b::-moz-selection, a::-moz-selection, img::-moz-selection, sup::-moz-selection, sub::-moz-selection {
+  color: #40281c;
+  background: #b8f0ba;
 }
 
 .corner-top-left {
@@ -347,49 +350,78 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   border-bottom-left-radius: 6px;
 }
 
+#footer {
+  height: 175px;
+  margin: 30px 0 0 0;
+  background: url(/images/bg-footer.jpg) center repeat-x;
+}
 #footer .center {
-  font-family: "EmbedFont-1";
   margin: 0 auto;
-  padding: 15px 0 30px;
+  padding: 0 0 30px;
 }
 #footer .center .content {
 @extent .box;
   width: 900px;
   margin: 0 auto;
   padding: 0;
-  height: 100px;
+  height: 174px;
 }
-#footer .center .content .column {
+#footer .center .content .row {
   position: relative;
-  display: inline;
-  float: left;
-  width: 150px;
-  margin: 10px 0 24px 24px;
-  padding: 0 15px 15px 0;
+  height: 35px;
+  width: 900px;
+  margin: 1px auto 1px;
+  padding: 0;
   background: transparent;
-  border-right: 1px solid #dddddd;
+  text-align: center;
 }
-#footer .center .content .column:last-child {
-  border-right: none;
-}
-#footer .center .content .column h4 {
-  font-family: "EmbedFont-1";
+#footer .center .content .row h4 {
+  font-family: "Embed-Helvetica";
   position: relative;
   margin: 0 0 0.5em 0;
-  color: #666666;
+  color: white;
   font-size: 10px;
   font-weight: 400;
   word-spacing: 0.1em;
   letter-spacing: 0.05em;
 }
-#footer .center .content .column a {
-  display: block;
-  margin: 0 0 0.3em 0;
-  color: #666666;
+#footer .center .content .row a {
+  position: relative;
+  display: inline;
+  margin: 0 1em 0.3em;
+  color: #49ac4d;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+}
+#footer .center .content .row a:hover {
+  color: white;
+}
+#footer .center .content .row a.partner {
+  display: inline;
+  top: 0;
+  margin: 0 5px 0.3em;
+  color: #49ac4d;
   font-size: 11px;
   font-weight: 200;
   text-decoration: none;
 }
-#footer .center .content .column a:hover {
-  color: #006bc7;
+#footer .center .content .row a.partner img {
+  height: 35px;
+  border: none;
+}
+#footer .center .content .row p {
+  position: relative;
+  top: 8px;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px black;
+}
+
+img.icon {
+  width: 15px;
+  height: 15px;
+  margin: -2px 1px 0 7px;
+  vertical-align: middle;
 }

@@ -9,13 +9,16 @@
 @import partials/corners
 
 #footer
+	height: 175px
+	margin: 30px 0 0 0
+	background: url(/images/bg-footer.jpg) center repeat-x
 	.center
 		@extend .center-container
 		@extend .box
 		@extend .clearfix
-		font-family: "EmbedFont-1"
+		@extend .font-base
 		margin: 0 auto
-		padding: ($v-gap / 2) 0 $v-gap
+		padding: 0 0 $v-gap
 		.content
 			@extent .box
 			@extend .bg-gradient-gray-light
@@ -24,20 +27,18 @@
 			width: $inside-width
 			margin: 0 auto
 			padding: 0
-			height: 100px
-			.column
+			height: 174px
+			.row
 				@extend .box
 				position: relative
-				+float-left
-				width: 150px
-				margin: 10px 0 24px 24px
-				padding: 0 15px 15px 0
+				height: 35px
+				width: $inside-width
+				margin: 1px auto 1px
+				padding: 0
 				background: transparent
-				border-right: 1px solid $line-color
-				&:last-child
-					border-right: none
+				text-align: center
 				h4
-					font-family: "EmbedFont-1"
+					font-family: "Embed-Helvetica"
 					position: relative
 					margin: 0 0 .5em 0
 					color: $footer-text
@@ -47,11 +48,41 @@
 					letter-spacing: .05em
 				a
 					@extend .font-base
-					display: block
-					margin: 0 0 .3em 0
+					position: relative
+					display: inline
+					margin: 0 1em .3em
+					color: $footer-link
+					font-size: 11px
+					font-weight: bold
+					text-decoration: none
+					&:hover
+						color: $footer-link-hover
+				a.partner
+					display: inline
+					top: 0
+					margin: 0 5px .3em
 					color: $footer-link
 					font-size: 11px
 					font-weight: 200
 					text-decoration: none
 					&:hover
-						color: $footer-link-hover
+						@extend .opaque
+					img
+						height: 35px
+						border: none
+				p
+					@extend .box
+					@extend .font-base
+					position: relative
+					top: 8px
+					color: $footer-text
+					font-size: 11px
+					font-weight: bold
+					text-shadow: 1px 1px 5px #000
+
+img.icon
+	width: 15px
+	height: 15px
+	margin: -2px 1px 0 7px
+	vertical-align: middle
+					

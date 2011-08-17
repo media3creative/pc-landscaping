@@ -1,9 +1,17 @@
-- @title = " | Gallery"
+- @title = " | Galleries"
 - @subtitle = ""
 - @body_class = "four"
 
+- @sub0 = ["Galleries", "/galleries"]
+- @sub1 = ["Arizona", "az"]
+- @sub2 = ["California", "ca"]
+- @sub3 = ["Hawaii", "hi"]
+- @sub4 = ["Texas", "tx"]
+
+
 %link{:href => "stylesheets/body-3.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
 %script{:charset => "utf-8", :src => "javascripts/jquery.prettyPhoto.js", :type => "text/javascript"}
+%script{:src => "javascripts/expandCollapse.js", :type => "text/javascript"}
 
 
 #two.banner
@@ -18,46 +26,214 @@
     .content
       #four.main
         .content
-          %a{:name => "anchor1"}
+          %a{:name => @sub1[1]}
           .section.no-image
-            %h1 Section without Image
+            %h1=@sub1[0]
             %ul.gallery.clearfix
               %li
-                %a{:href => "images/gallery/fullscreen/1.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_1.jpg"}/
+                %a{:href => "images/gallery/fullscreen/az-1.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-az-1.jpg"}/
               %li
-                %a{:href => "images/gallery/fullscreen/2.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_2.jpg"}/
+                %a{:href => "images/gallery/fullscreen/az-2.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-az-2.jpg"}/
               %li
-                %a{:href => "images/gallery/fullscreen/3.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_3.jpg"}/
+                %a{:href => "images/gallery/fullscreen/az-3.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-az-3.jpg"}/
               %li
-                %a{:href => "images/gallery/fullscreen/4.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_4.jpg"}/
+                %a{:href => "images/gallery/fullscreen/az-4.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-az-4.jpg"}/
               %li
-                %a{:href => "images/gallery/fullscreen/5.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_5.jpg",}/
+                %a{:href => "images/gallery/fullscreen/az-5.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-az-5.jpg",}/
               %li
-                %a{:href => "images/gallery/fullscreen/6.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_6.jpg"}/
+                %a{:href => "images/gallery/fullscreen/az-6.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-az-6.jpg"}/
+              #hide1{:style => "display:none"}
+                %li
+                  %a{:href => "images/gallery/fullscreen/az-7.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-az-7.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/az-8.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-az-8.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/az-9.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-az-9.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/az-10.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-az-10.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/az-11.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-az-11.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/az-12.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-az-12.jpg"}/
+            %p.expGallery
+              %a{:onclick => "return toggleMe('hide1')"} Expand / Hide
+
+
+
+          %a{:name => @sub2[1]}
+          .section.no-image
+            %h1=@sub2[0]
+            %ul.gallery.clearfix
               %li
-                %a{:href => "images/gallery/fullscreen/7.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_7.jpg"}/
+                %a{:href => "images/gallery/fullscreen/ca-1.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-ca-1.jpg"}/
               %li
-                %a{:href => "images/gallery/fullscreen/8.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_8.jpg"}/
+                %a{:href => "images/gallery/fullscreen/ca-2.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-ca-2.jpg"}/
               %li
-                %a{:href => "images/gallery/fullscreen/9.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_9.jpg"}/
+                %a{:href => "images/gallery/fullscreen/ca-3.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-ca-3.jpg"}/
               %li
-                %a{:href => "images/gallery/fullscreen/10.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_10.jpg"}/
+                %a{:href => "images/gallery/fullscreen/ca-4.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-ca-4.jpg"}/
               %li
-                %a{:href => "images/gallery/fullscreen/11.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_11.jpg"}/
+                %a{:href => "images/gallery/fullscreen/ca-5.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-ca-5.jpg",}/
               %li
-                %a{:href => "images/gallery/fullscreen/12.jpg", :rel => "prettyPhoto[gallery2]", :title => "Caption"}
-                  %img{:alt => "Title", :src => "images/gallery/thumbnails/t_12.jpg"}/
+                %a{:href => "images/gallery/fullscreen/ca-6.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-ca-6.jpg"}/
+              #hide2{:style => "display:none"}
+                %li
+                  %a{:href => "images/gallery/fullscreen/ca-7.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-ca-7.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/ca-8.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-ca-8.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/ca-9.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-ca-9.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/ca-10.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-ca-10.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/ca-11.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-ca-11.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/ca-12.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-ca-12.jpg"}/
+            %p.expGallery
+              %a{:onclick => "return toggleMe('hide2')"} Expand / Hide
+
+
+          %a{:name => @sub3[1]}
+          .section.no-image
+            %h1=@sub3[0]
+            %ul.gallery.clearfix
+              %li
+                %a{:href => "images/gallery/fullscreen/hi-1.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi-1.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi-2.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi-2.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi-3.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi-3.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi-4.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi-4.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi-5.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi-5.jpg",}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi-6.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi-6.jpg"}/
+              #hide3{:style => "display:none"}
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-7.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-7.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-8.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-8.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-9.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-9.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-10.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-10.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-11.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-11.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-13.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-13.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-14.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-14.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-15.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-15.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-16.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-16.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-17.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-17.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-18.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-18.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-19.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-19.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-20.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-20.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-21.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-21.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/hi-23.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-hi-23.jpg"}/
+            %p.expGallery
+              %a{:onclick => "return toggleMe('hide3')"} Expand / Hide
+
+
+          %a{:name => @sub4[1]}
+          .section.no-image
+            %h1=@sub4[0]
+            %ul.gallery.clearfix
+              %li
+                %a{:href => "images/gallery/fullscreen/tx-1.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-tx-1.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/tx-2.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-tx-2.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/tx-3.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-tx-3.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/tx-4.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-tx-4.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/tx-5.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-tx-5.jpg",}/
+              %li
+                %a{:href => "images/gallery/fullscreen/tx-6.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-tx-6.jpg"}/
+              #hide4{:style => "display:none"}
+                %li
+                  %a{:href => "images/gallery/fullscreen/tx-7.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-tx-7.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/tx-8.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-tx-8.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/tx-9.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-tx-9.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/tx-10.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-tx-10.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/tx-11.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-tx-11.jpg"}/
+                %li
+                  %a{:href => "images/gallery/fullscreen/tx-12.jpg", :rel => "prettyPhoto[gallery2]"}
+                    %img{:src => "images/gallery/thumbnails/t-tx-12.jpg"}/
+            %p.expGallery
+              %a{:onclick => "return toggleMe('hide4')"} Expand / Hide
+
+
 
         
    

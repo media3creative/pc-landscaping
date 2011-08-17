@@ -69,7 +69,6 @@
 			@extend .clearfix
 			position: relative
 			padding: 0 0 ($v-gap) 0
-			border-bottom: 1px dotted $section-border
 			&:last-child
 				padding-bottom: 0
 				border-bottom: none
@@ -84,7 +83,7 @@
 				margin: 0 ($h-gap / 2) ($v-gap / 2) 0
 				z-index: 100
 			h1
-				font-family: "EmbedFont-1"
+				font-family: "EmbedFont-2"
 				@extend .box
 				width: ($content-width - ($content-img-w + ($h-gap / 2)))
 				margin: $corner-radius 0 ($v-gap/3) ($content-img-w + ($h-gap / 2))
@@ -95,9 +94,8 @@
 				text-transform: uppercase
 				word-spacing: .1em
 				letter-spacing: .05em
-				border-bottom: 1px solid $section-lines
 			p
-				@extend .font-trebuchet
+				@extend .font-base
 				@extend .box
 				//@extend .clearfix
 				width: 100%
@@ -105,16 +103,17 @@
 				padding: 0 0 0 $corner-radius
 				color: $section-text
 				font-size: 12px
-				font-weight: 200
+				font-weight: bold
 				text-align: justify
+				text-shadow: 0px 0px 3px #000
 				line-height: 1.7em
 				&:last-child
 					margin-bottom: 0
 				a
-					color: $primary-light
+					color: $primary
 					text-decoration: none
 					&:hover
-						color: $primary
+						color: #fff
 				img
 					@extend .box
 					position: relative
@@ -123,7 +122,14 @@
 					width: auto
 					height: auto
 					margin: 0 ($h-gap /2) ($v-gap /2) 0
-					
+			p.expGallery
+				font-size: 80%
+				margin-top: 0
+				padding-right: 75px
+				text-align: right
+
+li img:hover
+	@extend .opaque
 
 .container-setup
 	@extend .box

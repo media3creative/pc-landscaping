@@ -49,11 +49,15 @@ ul#topnav
 	list-style: none
 	z-index: 50
 
-ul#topnav li 
+ul#topnav li
+	@extend .box
 	position: relative
 	+float-left
-	margin: 0 1.5em
+	margin: 0
 	padding: 0
+
+ul#topnav>li
+	margin: 0 1.2em
 
 ul#topnav li a 
 	+float-left
@@ -62,7 +66,7 @@ ul#topnav li a
 ul#topnav a.topnav
 	@extend .box
 	margin: 0
-	padding: 2px
+	padding: 2px 2px 13px 2px
 	font-size: 28px
 	text-align: center
 	text-transform: uppercase
@@ -75,11 +79,11 @@ ul#topnav li .sub
 	display: none
 	position: absolute
 	+float-left
-	top: 2.7em
-	left: 1px
+	top: 43px
+	left: -15px
+	font-size: 11px
 	background: $nav-dropdown-bg
 	padding: 5px 0 6px 0
-	border-top: 2px solid $nav-dropdown-accent
 	z-index: 50
 
 ul#topnav li .row 
@@ -90,27 +94,27 @@ ul#topnav li .row
 
 ul#topnav li .sub ul
 	+float-left
+	width: 140px
 	margin: 0
 	padding: 0
 	list-style: none
 
 ul#topnav .sub ul li 
-	width: 140px
+	width: 100%
 
 ul#topnav .sub ul li h2 a 
 	margin: 0 0 .5em 0
-	background-image: none
 
 ul#topnav .sub ul li a
 	@extend .box
+	@extend .font-base
 	display: block
 	float: none
 	width: 100%
 	height: auto
 	margin: 0
-	padding: 0.5em 1em
+	padding: 0.5em 2em
 	color: $nav-dropdown-text
-	background: $nav-dropdown-bg
 	text-indent: 0
 	text-decoration: none
 
