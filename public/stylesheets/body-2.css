@@ -533,7 +533,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
 .main .content .section, .main .content .main {
   position: relative;
   padding: 0 0 6px;
-  background: url(/images/nav_BG.png) repeat;
+  background: url(/images/nav_bg.png) repeat;
   border-top: 1px solid #777777;
   border-left: 1px solid #777777;
   border-bottom: 1px solid black;
@@ -589,7 +589,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   clear: both;
   width: 280px;
   margin: 0 0 30px 0;
-  background: url(/images/nav_BG.png) repeat;
+  background: url(/images/nav_bg.png) repeat;
   border-top: 1px solid #777777;
   border-left: 1px solid #777777;
   border-bottom: 1px solid black;
