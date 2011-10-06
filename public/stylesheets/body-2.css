@@ -541,7 +541,6 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   border: 1px solid black;
 }
 .main .content .section:last-child, .main .content .main:last-child {
-  padding-bottom: 0;
   border-bottom: none;
 }
 .main .content .section img, .main .content .main img {

@@ -3,8 +3,8 @@
 // MAIN NAVIGATION
 - @link0 = ["Home", "/home"]
 - @link1 = ["About", "/about"]
-- @link2 = ["Maintenance", "/maint"]
-- @link3 = ["Installation", "/install"]
+- @link2 = ["Services", "/services"]
+- @link3 = ["Shop", "http://www.shopify.com"]
 - @link4 = ["Galleries", "/gallery"]
 - @link5 = ["Contact", "/contact"]
 
@@ -195,19 +195,12 @@
           %li
             %a#two.topnav{:href => @link2[1]}
               =@link2[0]
-            / .sub
-            /   %ul
-            /     %li
-            /       %a{:href => "/az"} Arizona
-            /     %li
-            /       %a{:href => "/ca"} California
-            /     %li
-            /       %a{:href => "/hi"} Hawaii
-            /     %li
-            /       %a{:href => "/tx"} Texas
-          %li
-            %a#three.topnav{:href => @link3[1]}
-              =@link3[0]
+            .sub
+              %ul
+                %li
+                  %a{:href => @link2[1]+"#maintenance"} Maintenance
+                %li
+                  %a{:href => @link2[1]+"#installation"} Installation
           %li
             %a#four.topnav{:href => @link4[1]}
               =@link4[0]
@@ -221,6 +214,9 @@
                   %a{:href => @link4[1]+"#hi"} Hawaii
                 %li
                   %a{:href => @link4[1]+"#tx"} Texas
+          %li
+            %a#three.topnav{:href => @link3[1]}
+              =@link3[0]
           %li
             %a#five.topnav{:href => @link5[1]}
               =@link5[0]
