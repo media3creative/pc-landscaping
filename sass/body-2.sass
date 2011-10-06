@@ -199,6 +199,7 @@
 	position: relative
 	+float-left
 	width: $content-width
+	margin-bottom: 205px
 	.content
 		@extend .box
 		position: relative
@@ -250,6 +251,8 @@
 				font-weight: 200
 				text-align: justify
 				line-height: 1.7em
+				&:last-child
+					margin-bottom: $v-gap
 				a
 					color: $primary-light
 					text-decoration: none

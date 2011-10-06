@@ -5,6 +5,7 @@
 - @sub0 = ["About", "/about"]
 - @sub1 = ["About Us", "about"]
 - @sub2 = ["News", "news"]
+- @sub3 = ["Professionalism", "professionalism"]
 
 
 %link{:href => "stylesheets/body-2.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
@@ -21,18 +22,18 @@
   .center
     .content
       #two.sidebar.left
-        .subnav
-          %h1 About
-          .link
-            %h5 
-            %p
-              %a{:href => "#"+@sub1[1]}
-                =@sub1[0]
-          .link
-            %h5 
-            %p
-              %a{:href => "#"+@sub2[1]}
-                =@sub2[0]
+        / .subnav
+        /   %h1 About
+        /   .link
+        /     %h5 
+        /     %p
+        /       %a{:href => "#"+@sub1[1]}
+        /         =@sub1[0]
+        /   .link
+        /     %h5 
+        /     %p
+        /       %a{:href => "#"+@sub2[1]}
+        /         =@sub2[0]
         .text
           %h1 Our Licenses
           %p
@@ -64,10 +65,16 @@
             %p
               %b Serving California, Texas, Arizona & the Hawaiian Islands
         
+          / .spacer
+          / %a{:name => @sub2[1]}
+          / .section.no-image
+          /   %h1=@sub2[0]
+          /   %p
+          /     %b [01 August 2011]
+          /     &ndash; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
           .spacer
-          %a{:name => @sub2[1]}
+          %a{:name => @sub3[1]}
           .section.no-image
-            %h1=@sub2[0]
-            %p
-              %b [01 August 2011]
-              &ndash; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            %h1=@sub3[0]
+            %p Pacific Coast Landscape's standards of professionalism include uniformed and professionally trained employees, high quality trucks and equipment that are cleaned on a weekly basis and an emphasis on integrity and safety. PCLD Inc. recognizes professionals by granting licenses to signify specialization.

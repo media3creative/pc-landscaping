@@ -525,6 +525,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   display: inline;
   float: left;
   width: 584px;
+  margin-bottom: 205px;
 }
 .main .content {
   position: relative;
@@ -573,6 +574,9 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   font-weight: 200;
   text-align: justify;
   line-height: 1.7em;
+}
+.main .content .section p:last-child, .main .content .main p:last-child {
+  margin-bottom: 30px;
 }
 .main .content .section p a, .main .content .main p a {
   color: #8dce8f;

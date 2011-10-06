@@ -351,9 +351,13 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
 }
 
 #footer {
+  position: fixed;
+  bottom: 20px;
   height: 175px;
+  width: 100%;
   margin: 30px 0 0 0;
   background: url(/images/bg-footer.jpg) center repeat-x;
+  z-index: 22;
 }
 #footer .center {
   margin: 0 auto;
