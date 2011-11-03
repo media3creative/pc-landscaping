@@ -353,7 +353,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
 .body {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 250px;
 }
 .body .center {
   padding: 15px 0;

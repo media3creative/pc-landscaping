@@ -1,0 +1,97 @@
+- @title = " | Galleries"
+- @subtitle = " - Before &amp; After"
+- @body_class = "four"
+
+- @sub0 = ["Before &amp; After", "/b&a"]
+- @sub1 = ["Before &amp; After", "ba1"]
+- @sub2 = ["Before &amp; After - Section 2", "ba2"]
+- @sub3 = ["Before &amp; After - Section 3", "ba3"]
+
+
+%link{:href => "stylesheets/body-3.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+%script{:charset => "utf-8", :src => "javascripts/jquery.prettyPhoto.js", :type => "text/javascript"}
+%script{:src => "javascripts/expandCollapse.js", :type => "text/javascript"}
+
+
+.body
+  .center
+    .content
+      #four.main
+        .content
+          %a{:name => @sub1[1]}
+          .section.no-image
+            %h1=@sub1[0]
+            %ul.gallery.clearfix
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-1.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-1.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-2.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-2.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-3.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-3.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-4.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-4.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-5.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-5.jpg",}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-6.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-6.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-7.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-7.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-8.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-8.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-9.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-9.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-10.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-10.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-11.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-11.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-12.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-12.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-13.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-13.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-14.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-14.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-15.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-15.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/ba-16.jpg", :rel => "prettyPhoto[gallery1]"}
+                  %img{:src => "images/gallery/thumbnails/t-ba-16.jpg"}/
+
+
+
+
+
+        
+   
+%script{:charset => "utf-8", :type => "text/javascript"}
+  $(document).ready(function(){
+  $("area[rel^='prettyPhoto']").prettyPhoto();
+  
+  $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'pp_default',slideshow:3000, autoplay_slideshow: false});
+  $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+  
+  $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+  custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+  changepicturecallback: function(){ initialize(); }
+  });
+  
+  $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+  custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+  changepicturecallback: function(){ _bsap.exec(); }
+  });
+  });
+

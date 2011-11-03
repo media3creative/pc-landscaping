@@ -1440,7 +1440,7 @@ div.ppt {
 .body {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 250px;
 }
 .body .center {
   padding: 15px 0;

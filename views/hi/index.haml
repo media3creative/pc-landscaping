@@ -1,0 +1,113 @@
+- @title = " | Galleries"
+- @subtitle = " - Hawaii"
+- @body_class = "four"
+
+- @sub0 = ["Hawaii", "/hi"]
+- @sub1 = ["Hawaiian Properties", "hi1"]
+- @sub2 = ["Hawaii - Section 2", "hi2"]
+- @sub3 = ["Hawaii - Section 3", "hi3"]
+
+
+%link{:href => "stylesheets/body-3.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+%script{:charset => "utf-8", :src => "javascripts/jquery.prettyPhoto.js", :type => "text/javascript"}
+%script{:src => "javascripts/expandCollapse.js", :type => "text/javascript"}
+
+
+.body
+  .center
+    .content
+      #four.main
+        .content
+          %a{:name => @sub1[1]}
+          .section.no-image
+            %h1=@sub1[0]
+            %ul.gallery.clearfix
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-1.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-1.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-2.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-2.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-3.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-3.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-4.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-4.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-5.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-5.jpg",}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-6.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-6.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-7.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-7.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-8.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-8.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-9.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-9.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-10.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-10.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-11.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-11.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-13.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-13.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-14.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-14.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-15.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-15.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-16.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-16.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-17.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-17.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-18.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-18.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-19.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-19.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-20.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-20.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-21.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-21.jpg"}/
+              %li
+                %a{:href => "images/gallery/fullscreen/hi3-23.jpg", :rel => "prettyPhoto[gallery2]"}
+                  %img{:src => "images/gallery/thumbnails/t-hi3-23.jpg"}/
+
+
+
+
+
+
+        
+   
+%script{:charset => "utf-8", :type => "text/javascript"}
+  $(document).ready(function(){
+  $("area[rel^='prettyPhoto']").prettyPhoto();
+  
+  $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'pp_default',slideshow:3000, autoplay_slideshow: false});
+  $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+  
+  $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+  custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+  changepicturecallback: function(){ initialize(); }
+  });
+  
+  $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+  custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+  changepicturecallback: function(){ _bsap.exec(); }
+  });
+  });
+

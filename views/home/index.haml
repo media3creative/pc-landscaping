@@ -6,6 +6,23 @@
 
 #one.image-slider
   .center
+    #audio
+      %object#FlashID{:classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :height => "400", :width => "550"}
+        %param{:name => "movie", :value => "/images/audio.swf"}/
+        %param{:name => "quality", :value => "high"}/
+        %param{:name => "wmode", :value => "opaque"}/
+        %param{:name => "swfversion", :value => "6.0.65.0"}/
+        / This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt.
+        %param{:name => "expressinstall", :value => "Scripts/expressInstall.swf"}/
+        / Next object tag is for non-IE browsers. So hide it from IE using IECC.
+        / [if !IE]>
+        %object{:data => "/images/audio.swf", :height => "0", :type => "application/x-shockwave-flash", :width => "0"}
+        / <![endif]
+        %param{:name => "quality", :value => "high"}/
+        %param{:name => "wmode", :value => "opaque"}/
+        %param{:name => "swfversion", :value => "6.0.65.0"}/
+        %param{:name => "expressinstall", :value => "Scripts/expressInstall.swf"}/
+
     #slider-wrapper
       #slider.nivoSlider
         %img{:alt => "", :src => "/images/nivo/banner-1-1.jpg"}/

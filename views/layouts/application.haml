@@ -4,8 +4,8 @@
 - @link0 = ["Home", "/home"]
 - @link1 = ["About", "/about"]
 - @link2 = ["Services", "/services"]
-- @link3 = ["Shop", "http://www.shopify.com"]
-- @link4 = ["Galleries", "/gallery"]
+- @link3 = ["Shop", "#"]
+- @link4 = ["Galleries", "#"]
 - @link5 = ["Contact", "/contact"]
 
 // FOOTER LINKS
@@ -21,12 +21,12 @@
 - @linkA10 = ["Better Business Bureau", "http://www.bbb.org/us/"]
 
 - @linkB1 = ["Office: (951) 683-2197", "/path"]
-- @linkB2 = ["email@pclandscpaedesign.com", "mailto:email@pclandscpaedesign.com"]
+- @linkB2 = ["contactus@pclandscpaedesign.com", "mailto:contactus@pclandscpaedesign.com"]
 - @linkB3 = ["Contact Us", "/contact"]
 - @linkB4 = ["Testimonials", "/testimonials"]
 - @linkB5 = ["link name", "/path"]
 
-- @linkC1 = ["Facebook", "www.facebook.com/name"]
+- @linkC1 = ["Facebook", "https://www.facebook.com/pages/Pacific-Coast-Landscape-Design-Inc/170165906362637"]
 - @linkC2 = ["link name", "/path"]
 - @linkC3 = ["link name", "/path"]
 - @linkC4 = ["link name", "/path"]
@@ -207,15 +207,17 @@
             .sub
               %ul
                 %li
-                  %a{:href => @link4[1]+"#az"} Arizona
+                  %a{:href => "/az"} Arizona
                 %li
-                  %a{:href => @link4[1]+"#ca"} California
+                  %a{:href => "/ca"} California
                 %li
-                  %a{:href => @link4[1]+"#hi"} Hawaii
+                  %a{:href => "/hi"} Hawaii
                 %li
-                  %a{:href => @link4[1]+"#tx"} Texas
+                  %a{:href => "tx"} Texas
+                %li
+                  %a{:href => "b&a"} Before &amp; After
           %li
-            %a#three.topnav{:href => @link3[1]}
+            %a#three.topnav.inactive{:href => "#"}
               =@link3[0]
           %li
             %a#five.topnav{:href => @link5[1]}
@@ -258,10 +260,11 @@
               %a{:href => @linkB3[1]}
                 =@linkB3[0]
               = " | "
-              %a{:href => @linkB4[1]}
-                =@linkB4[0]
-              = " | "
-              %a{:href => @linkC1[1]}
+              // TESTIMONIALS
+              / %a{:href => @linkB4[1]}
+              /   =@linkB4[0]
+              / = " | "
+              %a{:href => @linkC1[1], :target => "_blank"}
                 %img.icon{:src => "/images/facebook-white.png"}
                 =@linkC1[0]
               

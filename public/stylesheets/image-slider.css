@@ -401,6 +401,15 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   text-transform: uppercase;
 }
 
+#audio {
+  position: absolute;
+  display: hidden;
+  top: -9999px;
+  width: 0px;
+  height: 0px;
+  background: #990000;
+}
+
 .nivoSlider {
   position: relative;
   width: 900px;
@@ -473,7 +482,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
 
 .nivo-directionNav a {
   position: absolute;
-  top: 45%;
+  top: 87%;
   z-index: 9;
   cursor: pointer;
   display: block;

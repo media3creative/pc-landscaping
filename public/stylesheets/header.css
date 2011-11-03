@@ -421,6 +421,10 @@ ul#topnav li:hover a.topnav, ul#topnav li a.topnav:hover {
   color: white;
 }
 
+.inactive {
+  color: #222222 !important;
+}
+
 ul#topnav li .sub {
   display: none;
   position: absolute;
