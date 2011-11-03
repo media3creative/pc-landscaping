@@ -1434,7 +1434,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
 html {
   margin: 0;
   padding: 0;
-  background: black url(/images/bg-center.png) top center repeat-y;
+  background: black url(/images/bg-center.jpg) top center repeat-y;
 }
 
 body {
