@@ -40,6 +40,14 @@
         .text
           %h1 Instant Impact
           %h3 View samples of our work
-          %p We have image galleries from completed projects in each of our service locations: Arizona, California, Hawaii, and Texas
-          %p.link
-            %a{:href => "/gallery"} View Now >
+          %p
+            We have image galleries from completed projects in each of our service locations:
+            %a{:href => "/az"} Arizona,
+            %a{:href => "/ca"} California,
+            %a{:href => "/hi"} Hawaii,
+            = "and"
+            %a{:href => "/tx"} Texas
+            %br
+            Or view our
+            %a{:href => "/beforeafter"} Before &amp; After
+            gallery.
